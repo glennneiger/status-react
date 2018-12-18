@@ -9,6 +9,7 @@
             :contacts             #{2}
             :tags                 #{}
             :membership-updates   []
+            :members-joined #{}
             :last-message-type    :message-type
             :last-message-content {:foo "bar"}
             :last-clock-value     nil}

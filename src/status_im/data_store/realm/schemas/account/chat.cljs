@@ -235,3 +235,6 @@
   (update v10 :properties merge
           {:last-clock-value {:type     :int
                               :optional true}}))
+(def v12
+  (update v10 :properties assoc
+          :members-joined         {:type "string[]"}))
