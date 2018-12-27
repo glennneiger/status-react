@@ -100,7 +100,7 @@
    (log/debug "PERF" :init-rest-of-chats (.now js/Date))
    (fx/merge cofx
              {:db (assoc db :chats/loading? false)}
-             (chat-loading/initialize-chats 15 nil))))
+             (chat-loading/initialize-chats 10 nil))))
 
 (handlers/register-handler-fx
  :init.callback/account-change-success
@@ -120,7 +120,7 @@
         (accounts.login/login)
         (node/initialize (get-in db [:accounts/login :address])))
       (init/initialize-account address)
-      (chat-loading/initialize-chats 0 15)))))
+      (chat-loading/initialize-chats 0 10)))))
 
 (handlers/register-handler-fx
  :init.callback/keychain-reset

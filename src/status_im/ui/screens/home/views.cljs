@@ -97,7 +97,6 @@
     {:component-did-mount
      (fn [this]
        (let [[_ loading?] (.. this -props -argv)]
-         (println "PERF" :home-did-mount (.now js/Date))
          (when loading?
            (utils/set-timeout
             #(re-frame/dispatch [:init-rest-of-chats])
